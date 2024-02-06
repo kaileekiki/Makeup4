@@ -1,15 +1,13 @@
 package com.makeup.domain;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Entity
 @Getter
+@Setter // 이 어노테이션 추가
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 
 public class Member extends BaseTime {
 
