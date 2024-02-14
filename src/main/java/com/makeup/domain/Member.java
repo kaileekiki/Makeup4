@@ -23,10 +23,10 @@ public class Member extends BaseTime {
     private int age;
     private int numOfMatching;
     private int numOfFollower;
+    private String calendar;    // 나중에 아직은 잘 모르겠음
+
 
 }
-
-
 
     // 아직 수정이 필요함!
 /*
@@ -42,3 +42,4 @@ public class Member extends BaseTime {
 }
 
  */
+
