@@ -1,22 +1,25 @@
 package com.makeup.service;
 
-import com.makeup.domain.Member;
+
 import com.makeup.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
-import java.util.Optional;
 
-@Service
-public class MemberServiceImpl implements MemberService {
+//
+//@Service
+////public class MemberServiceImpl implements MemberService {
+//
+//    private final MemberRepository memberRepository;
+//
+//    @Autowired
+//    public MemberServiceImpl(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+//}
+//
+//// 아직은 사용되지 않는 코드임.
 
-    private final MemberRepository memberRepository;
-
-    @Autowired
-    public MemberServiceImpl(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
-
+    /*
     @Override
     public Member save(Member member) {
         return memberRepository.save(member);
@@ -57,3 +60,5 @@ public class MemberServiceImpl implements MemberService {
         memberRepository.delete(member);
     }
 }
+
+*/

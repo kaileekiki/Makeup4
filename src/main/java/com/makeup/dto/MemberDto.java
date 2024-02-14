@@ -39,5 +39,4 @@ public class MemberDto {
                 .build();
     }
 
-
 }
