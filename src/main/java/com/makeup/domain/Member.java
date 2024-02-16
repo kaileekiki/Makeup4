@@ -34,14 +34,9 @@ public class Member extends BaseTime {
     private String calendar;    // 나중에 아직은 잘 모르겠음
 
 
-}
 
-    // 아직 수정이 필요함!
-/*
-    public static Member toMember(MemberDto memberDto, College college) {
-=======
+
     public static Member toMember(MemberDto memberDto) {
->>>>>>> 645a430270432c7fb21a21c5cda3ac8495c21ba5
         return Member.builder()
                 .email(memberDto.getEmail())
                 .username(memberDto.getUsername())
@@ -77,13 +72,4 @@ public class Member extends BaseTime {
     }
 
 }
-
-<<<<<<< HEAD
- */
-//=======
-//
-//
-//
-//
-//>>>>>>> 645a430270432c7fb21a21c5cda3ac8495c21ba5
 
