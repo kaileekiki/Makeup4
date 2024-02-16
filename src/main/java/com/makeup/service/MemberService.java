@@ -1,7 +1,7 @@
 package com.makeup.service;
 
 import com.makeup.dto.MemberDto;
-import com.makeup.exception.UsernameAlreadyExistsException;
+import com.makeup.exception.EmailAlreadyExistsException;
 import com.makeup.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,20 +18,29 @@ public class MemberService {
         return member.getMemberId();
     }
 
-    public void validateUsername(String username) {
+    public void validateEmail(String email) {
         memberRepository
-                .findByUsername(username)
+                .findByEmail(email)
                 .ifPresent(
                         (__) -> {
-                            throw new UsernameAlreadyExistsException();
+                            throw new EmailAlreadyExistsException();
                         });
     }
 
     public Long signInMember(MemberDto memberDto) {
         Member member =
                 memberRepository
-                        .findMemberByUsernameAndPassword(memberDto.getUsername(), memberDto.getPassword())
+                        .findMemberByEmailAndPassword(memberDto.getEmail(), memberDto.getPassword())
                         .orElseThrow(MemberNotFoundException::new);
         return member.getMemberId();
+    }
+
+    public MemberDto getProfileOf(Long memberId) {
+        System.out.println("memberId = " + memberId);
+        Member member =
+                memberRepository
+                        .findMemberById(memberId)
+                        .orElseThrow(MemberNotFoundException::new);
+        return MemberDto.from(member);
     }
 }

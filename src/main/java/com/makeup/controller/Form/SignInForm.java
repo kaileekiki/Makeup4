@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class SignInForm {
-    private String username;
+    private String email;
 
     private String password;
 }

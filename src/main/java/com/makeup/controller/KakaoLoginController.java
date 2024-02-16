@@ -1,3 +1,4 @@
+/*
 package com.makeup.controller;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -23,3 +24,4 @@ public class KakaoLoginController {
     }
 
 }
+*/

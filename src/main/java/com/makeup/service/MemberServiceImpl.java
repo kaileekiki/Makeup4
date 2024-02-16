@@ -1,4 +1,4 @@
-package com.makeup.service;
+/*package com.makeup.service;
 
 import com.makeup.domain.Member;
 import com.makeup.repository.MemberRepository;
@@ -57,3 +57,4 @@ public class MemberServiceImpl implements MemberService {
         memberRepository.delete(member);
     }
 }
+*/

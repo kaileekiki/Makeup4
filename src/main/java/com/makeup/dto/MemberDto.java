@@ -13,6 +13,7 @@ import lombok.*;
 public class MemberDto {
     private Long memberId;
 
+    private String email;
     private String username;
     private String password;
     private String birthYear;
@@ -25,6 +26,7 @@ public class MemberDto {
     // Form에서
     public static MemberDto from(SignUpForm signUpForm) {
         return MemberDto.builder()
+                .email(signUpForm.getEmail())
                 .username(signUpForm.getUsername())
                 .password(signUpForm.getPassword())
                 .birthYear(signUpForm.getBirthYear())
@@ -34,8 +36,19 @@ public class MemberDto {
 
     public static MemberDto from(SignInForm signInForm) {
         return MemberDto.builder()
-                .username(signInForm.getUsername())
+                .email(signInForm.getEmail())
                 .password(signInForm.getPassword())
+                .build();
+    }
+
+    public static MemberDto from(Member member) {
+        return MemberDto.builder()
+                .memberId(member.getMemberId())
+                .email(member.getEmail())
+                .username(member.getUsername())
+                .password(member.getPassword())
+                .gender(member.getGender())
+                .age(member.getAge())
                 .build();
     }
 

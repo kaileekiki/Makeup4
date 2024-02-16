@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Getter
 @Setter // 이 어노테이션 추가
@@ -17,10 +18,15 @@ public class Member extends BaseTime {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long memberId;
 
+    private String email;
     private String username;
     private String password;
     private String birthYear;
-    private boolean gender;
+    private Boolean gender;
+
+    private Date today;
+
+
 
     private int age;
     private int numOfFolling;
@@ -28,6 +34,7 @@ public class Member extends BaseTime {
 
     public static Member toMember(MemberDto memberDto) {
         return Member.builder()
+                .email(memberDto.getEmail())
                 .username(memberDto.getUsername())
                 .password(memberDto.getPassword())
                 .birthYear(memberDto.getBirthYear())

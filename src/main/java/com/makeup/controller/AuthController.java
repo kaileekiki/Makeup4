@@ -25,8 +25,8 @@ public class AuthController {
     }
 
     @GetMapping("/sign-up/validation")
-    public ResponseEntity<ApiResponse> validateId(@RequestParam String username) {
-        memberService.validateUsername(username);
+    public ResponseEntity<ApiResponse> validateId(@RequestParam String email) {
+        memberService.validateEmail(email);
         return ResponseEntity.ok(new ApiResponse(true));
     }
 

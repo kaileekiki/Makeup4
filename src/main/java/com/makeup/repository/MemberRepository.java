@@ -9,8 +9,11 @@ import java.util.Optional;
 
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
-    Optional<Member> findByUsername(String username);
+    Optional<Member> findByEmail(String email);
 
-    @Query("select m from Member m where m.username = :username and m.password = :password")
-    Optional<Member> findMemberByUsernameAndPassword(String username, String password);
+    @Query("select m from Member m where m.email = :email and m.password = :password")
+    Optional<Member> findMemberByEmailAndPassword(String email, String password);
+
+    @Query("select m from Member m  where m.memberId = :memberId")
+    Optional<Member> findMemberById(Long memberId);
 }
