@@ -7,7 +7,7 @@ import lombok.Getter;
 @Entity
 @Getter
 
-public class Like extends BaseTime{
+public class Likes extends BaseTime{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
