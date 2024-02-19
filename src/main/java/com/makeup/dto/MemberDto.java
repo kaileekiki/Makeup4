@@ -1,5 +1,6 @@
 package com.makeup.dto;
 
+import com.makeup.controller.Form.EditMemberForm;
 import com.makeup.controller.Form.SignInForm;
 import com.makeup.controller.Form.SignUpForm;
 import com.makeup.domain.Member;
@@ -49,6 +50,14 @@ public class MemberDto {
                 .password(member.getPassword())
                 .gender(member.getGender())
                 .age(member.getAge())
+                .build();
+    }
+
+    public static MemberDto from(EditMemberForm editMemberForm) {
+        return MemberDto.builder()
+                .username(editMemberForm.getUsername())
+                .birthYear(editMemberForm.getBirthYear())
+                .gender(editMemberForm.getGender())
                 .build();
     }
 

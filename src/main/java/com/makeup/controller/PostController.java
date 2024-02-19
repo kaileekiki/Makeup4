@@ -1,3 +1,4 @@
+/*
 package com.makeup.controller;
 
 import com.makeup.domain.Post;
@@ -67,3 +68,4 @@ public class PostController {
         postService.deletePost(postId);
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.makeup.service;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
@@ -55,3 +56,5 @@ public class AwsS3Service {
         return System.currentTimeMillis() + "_" + originalFilename;
     }
 }
+
+ */

@@ -1,4 +1,4 @@
-package com.makeup.service;
+/*package com.makeup.service;
 import com.makeup.domain.Post;
 import com.makeup.repository.PostRepository;
 import com.makeup.domain.Member;
@@ -119,3 +119,4 @@ public class PostService {
         return currentLikes;
     }
 }
+*/

@@ -37,8 +37,15 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+dependencies {
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    runtimeOnly 'mysql:mysql-connector-java' //MySQL
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //JPA
 }

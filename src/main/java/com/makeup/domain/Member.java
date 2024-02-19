@@ -12,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "MEMBER")
 public class Member extends BaseTime {
 
     @Id
@@ -24,13 +25,8 @@ public class Member extends BaseTime {
     private String birthYear;
     private Boolean gender;
 
-    private Date today;
-
-
 
     private int age;
-    private int numOfFollwing;
-    private int numOfFollower;
     private String calendar;    // 나중에 아직은 잘 모르겠음
 
 
@@ -46,6 +42,7 @@ public class Member extends BaseTime {
                 .age(findAge(memberDto.getBirthYear()))
                 .build();
     }
+
 
     public static int findAge(String birthYear){
         LocalDate today = LocalDate.now();
