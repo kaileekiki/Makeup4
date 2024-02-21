@@ -18,6 +18,7 @@ public class ReservationDto {
 
     public static ReservationDto MentoFrom(MentoReservation mentoReservation) {
         return ReservationDto.builder()
+                .mentoReservationId(mentoReservation.getMentoReservationId())
                 .mentoDate(mentoReservation.getMentoDate())
                 .build();
     }

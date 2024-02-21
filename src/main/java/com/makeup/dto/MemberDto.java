@@ -16,22 +16,24 @@ public class MemberDto {
 
     private String email;
     private String username;
+    private String userNickname;
     private String password;
     private String birthYear;
     private Boolean gender;
+    private String phoneNumber;
 
     private int age;
-    private int numOfFolling;
-    private int numOfFollower;
 
     // Form에서
     public static MemberDto from(SignUpForm signUpForm) {
         return MemberDto.builder()
                 .email(signUpForm.getEmail())
                 .username(signUpForm.getUsername())
+                .userNickname(signUpForm.getUserNickname())
                 .password(signUpForm.getPassword())
                 .birthYear(signUpForm.getBirthYear())
                 .gender(signUpForm.getGender())
+                .phoneNumber(signUpForm.getPhoneNumber())
                 .build();
     }
 
@@ -47,8 +49,10 @@ public class MemberDto {
                 .memberId(member.getMemberId())
                 .email(member.getEmail())
                 .username(member.getUsername())
+                .userNickname(member.getUserNickname())
                 .password(member.getPassword())
                 .gender(member.getGender())
+                .phoneNumber(member.getPhoneNumber())
                 .age(member.getAge())
                 .build();
     }

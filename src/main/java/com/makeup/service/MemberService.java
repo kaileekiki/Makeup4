@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import com.makeup.domain.Member;
 import com.makeup.exception.MemberNotFoundException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.makeup.domain.Member.findAge;
 
 @Service
@@ -22,12 +25,11 @@ public class MemberService {
     }
 
     public void validateEmail(String email) {
-        memberRepository
-                .findByEmail(email)
-                .ifPresent(
-                        (__) -> {
-                            throw new EmailAlreadyExistsException();
-                        });
+        boolean validation = memberRepository
+                .existsByEmail(email);
+        if (validation) { throw new EmailAlreadyExistsException();}
+
+
     }
 
     public Long signInMember(MemberDto memberDto) {

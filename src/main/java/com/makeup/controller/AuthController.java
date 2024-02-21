@@ -30,7 +30,7 @@ public class AuthController {
         return ResponseEntity.ok(new ApiResponse(true));
     }
 
-    @PostMapping("/sign-in")
+    @PostMapping ("/sign-in")
     public ResponseEntity<ApiResponse> signIn(@RequestBody SignInForm form) {
         Long memberId = memberService.signInMember(MemberDto.from(form));
         ApiResponse response = new MemberIdResponse(memberId);
